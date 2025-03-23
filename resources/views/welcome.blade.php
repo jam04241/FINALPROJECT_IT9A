@@ -12,42 +12,23 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    
+
 </head>
 
-<body class="font-sans h-screen w-full">
-    <div class="bg-white-100 text-black/100 h-screen w-full flex flex-col">
-        <!-- Header -->
-        <header class="fixed top-0 w-full bg-white text-black py-2 mt-2">
-            <div class="container mx-auto flex justify-between items-center px-6">
-                <!-- Logo -->
-                <a href="#" class="flex items-center">
-                    <img src="{{asset('assets/bmp_logo.png')}}" alt="BMP Logo" class="h-8"> <!-- Update with actual logo path -->
-                </a>
 
-                <!-- Navigation Menu -->
-                @if (Route::has('login'))
-                <nav class="flex space-x-8 uppercase font-semibold tracking-wide">
-                    @auth
-                    <a href="{{ url('/dashboard') }}" class="hover:text-gray-700 dark:hover:text-gray-300">Dashboard</a>
-                    @else
-                    <a href="#" class="hover:text-gray-700 dark:hover:text-gray-300">Home</a>
-                    <a href="#" class="hover:text-gray-700 dark:hover:text-gray-300">Cars</a>
-                    <a href="#" class="hover:text-gray-700 dark:hover:text-gray-300">Booking</a>
-                    <a href="#" class="hover:text-gray-700 dark:hover:text-gray-300">Contacts</a>
-                    <a href="{{ route('login') }}" class="hover:text-gray-700 dark:hover:text-gray-300">
-                        <i class="fa-solid fa-user text-lg"></i>
-                    </a>
-                    @endif
-                </nav>
-                @endif
-            </div>
-        </header>
+<body class="font-sans h-screen w-full">
+    <!-- MAIN BODY -->
+    <div class="bg-white-100 text-black/100 h-screen w-full flex flex-col">
+
+        <!-- HEADER LOCATE: resources/views/profile/partials/header.blade.php-->
+        @section('content')
+        @include('profile.partials.header')
 
         <!-- Main Content -->
         <main class="flex-1 mt-16">
             <!-- Hero Section -->
             <!-- Hero Section -->
+            <!-- FIRST CONTAINER -->
             <section class="relative bg-[#0f1021] text-white py-50 text-center flex flex-col justify-center">
                 <div class="absolute inset-0 flex justify-between">
                     <img src="{{ asset('assets/carleft.svg') }}" class="w-[35%]" alt="Car Left">
@@ -70,6 +51,8 @@
                     </a>
                 </div>
             </section>
+
+            <!-- SECOND CONTAINER -->
             <!-- Main Section -->
             <section class="py-12 bg-white text-black text-center">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-16 items-start max-w-6xl mx-auto">
@@ -85,14 +68,12 @@
                                 <i class="fa-solid fa-map-marker-alt text-[#0f294c] text-2xl"></i> Davao, Mudiang
                             </span>
                             <span class="flex items-center gap-2 justify-center">
-                                <i class="fa-solid fa-map-marker-alt text-[#0f294c] text-2xl"></i> Samal, Babak
-                            </span>
-                            <span class="flex items-center gap-2 justify-center">
                                 <i class="fa-solid fa-map-marker-alt text-[#0f294c] text-2xl"></i> Davao, Ula
                             </span>
                         </div>
                     </div>
 
+                    <!-- THIRD CONTAINER -->
                     <!-- Services Section -->
                     <div class="pb-8 md:pb-0">
                         <h2 class="text-2xl font-bold mb-6">OUR SERVICES</h2>
@@ -122,36 +103,139 @@
                     <div>
                         <h2 class="text-2xl font-bold mb-6">OUR CAR BRANDS</h2>
                         <div class="grid grid-cols-3 gap-8 justify-center items-center">
-                            <img src="{{ asset('assets/brands/icon_toyota.png') }}" alt="Toyota" class="h-20 mx-auto">
-                            <img src="{{ asset('assets/brands/icon_honda.png') }}" alt="Honda" class="h-20 mx-auto">
-                            <img src="{{ asset('assets/brands/icon_ford.png') }}" alt="Ford" class="h-20 mx-auto">
-                            <img src="{{ asset('assets/brands/icon_mitshubishi.png') }}" alt="Mitsubishi" class="h-15 mx-auto">
-                            <img src="{{ asset('assets/brands/icon_suzuki.png') }}" alt="Suzuki" class="h-15 mx-auto">
-                            <img src="{{ asset('assets/brands/icon_nissan.png') }}" alt="Nissan" class="h-20 mx-auto">
+                            <img src="{{ asset('assets/body2/brands/icon_toyota.png') }}" alt="Toyota"
+                                class="h-20 mx-auto">
+                            <img src="{{ asset('assets/body2/brands/icon_honda.png') }}" alt="Honda"
+                                class="h-20 mx-auto">
+                            <img src="{{ asset('assets/body2/brands/icon_ford.png') }}" alt="Ford" class="h-20 mx-auto">
+                            <img src="{{ asset('assets/body2/brands/icon_mitshubishi.png') }}" alt="Mitsubishi"
+                                class="h-15 mx-auto">
+                            <img src="{{ asset('assets/body2/brands/icon_suzuki.png') }}" alt="Suzuki"
+                                class="h-15 mx-auto">
+                            <img src="{{ asset('assets/body2/brands/icon_nissan.png') }}" alt="Nissan"
+                                class="h-20 mx-auto">
                         </div>
                     </div>
 
+                    <div>
+                        <img src="{{ asset('assets/body2/car/mercedes.png') }}" alt="Mercedes" class="size-auto">
+
+                    </div>
+
+                    <div>
+                        <span class="font-bold">FEEL THE BEST EXPERIENCEWITH OUR RENTAL DEALS</span><br>
+                        <p class="text-black-600 text-sm text-left">
+                            <b>DEAL FOR EVERY BUDGET</b>
+                            <br>
+                            looking for a car rental for your next trip? Here are some tips to help you find.
+                        </p>
+                        <br>
+                        <p class="text-black-600 text-sm text-left">
+                            <b>BEST PRICE GUARANTEED</b>
+                            <br>
+                            looking for a car rental for your next trip? Here are some tips to help you find.
+                        </p>
+                    </div>
                 </div>
             </section>
-
-
-
+            <!-- FORTH CONTAINER -->
             <!-- Services -->
+            <section class="py-10 bg-[#0B1320] text-white min-h-screen flex flex-col items-center">
+                <h2 class="text-lg font-semibold text-gray-400">BEST OFFER</h2>
+                <h4 class="text-3xl font-bold">OUR FEATURED CARS</h4>
+            
+                <!-- Parent Container (Flex Column) -->
+                <div class="mt-10 flex flex-col gap-12 w-full max-w-5xl">
+            
+                    <!-- VIOS -->
+                    <div class="flex flex-row items-center justify-between">
+                        <img src="{{ asset('assets/body3/car/vios.svg') }}" alt="Vios" class="h-auto">
+                        <div class="max-w-md">
+                            <div class="flex items-center gap-2">
+                                <img src="{{ asset('assets/body3/brands/logo_toyota.svg') }}" alt="Toyota" class="h-15">
+                                <h1 class="text-3xl font-semibold">VIOS</h1>
+                            </div>
+                            <p class="text-sm text-gray-400">1.3 XLE CVT (Silver Metallic 1)</p>
+                            <p class="mt-2 text-sm text-gray-300">
+                                A reliable and fuel-efficient subcompact sedan known for its practicality and popularity in Asian markets.
+                            </p>
+                            <button class="mt-4 px-4 py-2 inline-block bg-white text-black rounded-md text-lg font-semibold hover:bg-gray-200 transition">BOOK NOW</button>
+                        </div>
+                    </div>
+            
+                    <!-- MONTERO -->
+                    <div class="flex flex-row items-center justify-between">
+                        
+                        <div class="max-w-md text-right">
+                            <div class="flex items-center justify-end gap-2">
+                                <img src="{{ asset('assets/body3/brands/logo_mitshubishi.svg') }}" alt="Mitsubishi" class="h-10">
+                                <h1 class="text-3xl font-semibold italic">MONTERO</h1>
+                            </div>
+                            <p class="text-sm text-gray-400">2.4L Black Series 2WD 8AT</p>
+                            <p class="mt-2 text-sm text-gray-300">
+                                A mid-size SUV offering a blend of rugged off-road capability and comfortable on-road manners.
+                            </p>
+                            <button class="mt-4 px-4 py-2 inline-block bg-white text-black rounded-md text-lg font-semibold hover:bg-gray-200 transition">BOOK NOW</button>
+                        </div>
+                        <img src="{{ asset('assets/body3/car/montero.svg') }}" alt="Montero" class="h-auto">
+                    </div>
+            
+                    <!-- RAPTOR -->
+                    <div class="flex flex-row items-center justify-between">
+                        <img src="{{ asset('assets/body3/car/raptor.svg') }}" alt="Raptor" class="h-auto">
+                        
+                        <div class="max-w-md">
+                            <div class="flex items-center gap-2">
+                                <img src="{{ asset('assets/body3/brands/logo_ford.svg') }}" alt="Ford" class="h-20">
+                                <h1 class="text-3xl font-semibold italic">RAPTOR</h1>
+                            </div>
+                            <p class="text-sm text-gray-400">1.3 XLE CVT (Silver Metallic 1)</p>
+                            <p class="mt-2 text-sm text-gray-300">
+                                A reliable and fuel-efficient subcompact sedan known for its practicality and popularity in Asian markets.
+                            </p>
+                            <button class="mt-4 px-4 py-2 inline-block bg-white text-black rounded-md text-lg font-semibold hover:bg-gray-200 transition">BOOK NOW</button>
+                        </div>    
+
+                    </div>
+            
+                </div>
+            </section>
+            <!-- FORTH CONTAINER -->
+            <!-- Booking Process -->
+
+            <div class="justify-center item-center">
+                <h1>How it works</h1>
+                <p>booking process</p>
+                <p>LOGIN OR REGISTER</p>
+                <p>Create an account or sign in to access the car rental service.</p>
+
+                <p>CHOOSE CAR</p>
+                <p>Choose from a variety of available vehicles that suit your needs.</p>
+
+                <p>PICK A DATE</p>
+                <p>Select the rental start and end dates for your booking.</p>
+
+                <p>SELECT A BRANCH</p>
+                <p>Choose a convenient pickup and drop-off location.</p>
+
+                <p>DRIVE & ENJOY</p>
+                <p>Pick up your car and enjoy a smooth and hassle-free ride!</p>
+            </div>
+
+            <!-- FIFTH CONTAINER -->
             <section
                 class="py-10 text-center bg-gray-100 dark:bg-gray-900 text-black dark:text-white min-h-screen flex flex-col justify-center">
-                <h2 class="text-2xl font-bold">Our Services</h2>
-                <div class="mt-6 flex flex-wrap justify-center gap-8">
-                    <div class="max-w-xs bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-                        <h3 class="text-lg font-semibold">Daily and Long-Term Rentals</h3>
-                        <p class="mt-2 text-sm">Flexible rental options, whether you need a car for a day, a week, or
-                            longer.</p>
-                    </div>
-                    <div class="max-w-xs bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-                        <h3 class="text-lg font-semibold">Wide Vehicle Selection</h3>
-                        <p class="mt-2 text-sm">Choose from economy cars, SUVs, luxury vehicles, and more to match your
-                            needs.</p>
-                    </div>
-                </div>
+                GET IN TOUCH<br>
+                Want to get in touch? We’d love to hear from you. Here’s how you can reach us
+                <br>
+                Talk to sales<br>
+                Connect with our sales team for personalized recommendations and exclusive deals.<br>
+                +639 123 456 88<br>
+                +639 987 621 31
+
+                EMAIL US<br>
+                Reach out to us via email for inquiries, support, or assistance anytime.<br>
+                bmpcarrentals@gmail.com
             </section>
         </main>
     </div>

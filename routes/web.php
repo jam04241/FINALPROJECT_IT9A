@@ -2,6 +2,9 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Log;
 
 Route::get('/', function () {
     return view('welcome');
@@ -21,4 +24,18 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::get('/get-provinces', function () {
+    $response = Http::get('https://psgc.gitlab.io/api/provinces');
+    return $response->json();
+});
+
+Route::get('/get-cities/{provinceId}', function ($provinceId) {
+    $response = Http::get("https://psgc.gitlab.io/api/provinces/{$provinceId}/municipalities");
+    return $response->json();
+});
+
+Route::get('/get-barangays/{cityId}', function ($cityId) {
+    $response = Http::get("https://psgc.gitlab.io/api/municipalities/{$cityId}/barangays");
+    return $response->json();
+});
 require __DIR__.'/auth.php';
