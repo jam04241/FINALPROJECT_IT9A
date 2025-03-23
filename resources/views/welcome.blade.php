@@ -99,21 +99,16 @@
                         </ul>
                     </div>
 
-                    <!-- Car Brands Section -->
+                    <!-- Car booking Section -->
                     <div>
-                        <h2 class="text-2xl font-bold mb-6">OUR CAR BRANDS</h2>
+                        <h2 class="text-2xl font-bold mb-6">OUR CAR booking</h2>
                         <div class="grid grid-cols-3 gap-8 justify-center items-center">
-                            <img src="{{ asset('assets/body2/brands/icon_toyota.png') }}" alt="Toyota"
-                                class="h-20 mx-auto">
-                            <img src="{{ asset('assets/body2/brands/icon_honda.png') }}" alt="Honda"
-                                class="h-20 mx-auto">
+                            <img src="{{ asset('assets/body2/brands/icon_toyota.png') }}" alt="Toyota" class="h-20 mx-auto">
+                            <img src="{{ asset('assets/body2/brands/icon_honda.png') }}" alt="Honda" class="h-20 mx-auto">
                             <img src="{{ asset('assets/body2/brands/icon_ford.png') }}" alt="Ford" class="h-20 mx-auto">
-                            <img src="{{ asset('assets/body2/brands/icon_mitshubishi.png') }}" alt="Mitsubishi"
-                                class="h-15 mx-auto">
-                            <img src="{{ asset('assets/body2/brands/icon_suzuki.png') }}" alt="Suzuki"
-                                class="h-15 mx-auto">
-                            <img src="{{ asset('assets/body2/brands/icon_nissan.png') }}" alt="Nissan"
-                                class="h-20 mx-auto">
+                            <img src="{{ asset('assets/body2/brands/icon_mitshubishi.png') }}" alt="Mitsubishi" class="h-15 mx-auto">
+                            <img src="{{ asset('assets/body2/brands/icon_suzuki.png') }}" alt="Suzuki" class="h-15 mx-auto">
+                            <img src="{{ asset('assets/body2/brands/icon_nissan.png') }}" alt="Nissan" class="h-20 mx-auto">
                         </div>
                     </div>
 
@@ -143,99 +138,155 @@
             <section class="py-10 bg-[#0B1320] text-white min-h-screen flex flex-col items-center">
                 <h2 class="text-lg font-semibold text-gray-400">BEST OFFER</h2>
                 <h4 class="text-3xl font-bold">OUR FEATURED CARS</h4>
-            
+
                 <!-- Parent Container (Flex Column) -->
                 <div class="mt-10 flex flex-col gap-12 w-full max-w-5xl">
-            
+
                     <!-- VIOS -->
                     <div class="flex flex-row items-center justify-between">
                         <img src="{{ asset('assets/body3/car/vios.svg') }}" alt="Vios" class="h-auto">
                         <div class="max-w-md">
                             <div class="flex items-center gap-2">
-                                <img src="{{ asset('assets/body3/brands/logo_toyota.svg') }}" alt="Toyota" class="h-15">
+                                <img src="{{ asset('assets/body3/booking/booking_toyota.svg') }}" alt="Toyota"
+                                    class="h-15">
                                 <h1 class="text-3xl font-semibold">VIOS</h1>
                             </div>
                             <p class="text-sm text-gray-400">1.3 XLE CVT (Silver Metallic 1)</p>
                             <p class="mt-2 text-sm text-gray-300">
-                                A reliable and fuel-efficient subcompact sedan known for its practicality and popularity in Asian markets.
+                                A reliable and fuel-efficient subcompact sedan known for its practicality and popularity
+                                in Asian markets.
                             </p>
-                            <button class="mt-4 px-4 py-2 inline-block bg-white text-black rounded-md text-lg font-semibold hover:bg-gray-200 transition">BOOK NOW</button>
+                            <button
+                                class="mt-4 px-4 py-2 inline-block bg-white text-black rounded-md text-lg font-semibold hover:bg-gray-200 transition">BOOK
+                                NOW</button>
                         </div>
                     </div>
-            
+
                     <!-- MONTERO -->
                     <div class="flex flex-row items-center justify-between">
-                        
+
                         <div class="max-w-md text-right">
                             <div class="flex items-center justify-end gap-2">
-                                <img src="{{ asset('assets/body3/brands/logo_mitshubishi.svg') }}" alt="Mitsubishi" class="h-10">
+                                <img src="{{ asset('assets/body3/booking/booking_mitshubishi.svg') }}" alt="Mitsubishi"
+                                    class="h-10">
                                 <h1 class="text-3xl font-semibold italic">MONTERO</h1>
                             </div>
                             <p class="text-sm text-gray-400">2.4L Black Series 2WD 8AT</p>
                             <p class="mt-2 text-sm text-gray-300">
-                                A mid-size SUV offering a blend of rugged off-road capability and comfortable on-road manners.
+                                A mid-size SUV offering a blend of rugged off-road capability and comfortable on-road
+                                manners.
                             </p>
-                            <button class="mt-4 px-4 py-2 inline-block bg-white text-black rounded-md text-lg font-semibold hover:bg-gray-200 transition">BOOK NOW</button>
+                            <button
+                                class="mt-4 px-4 py-2 inline-block bg-white text-black rounded-md text-lg font-semibold hover:bg-gray-200 transition">BOOK
+                                NOW</button>
                         </div>
                         <img src="{{ asset('assets/body3/car/montero.svg') }}" alt="Montero" class="h-auto">
                     </div>
-            
+
                     <!-- RAPTOR -->
                     <div class="flex flex-row items-center justify-between">
                         <img src="{{ asset('assets/body3/car/raptor.svg') }}" alt="Raptor" class="h-auto">
-                        
+
                         <div class="max-w-md">
                             <div class="flex items-center gap-2">
-                                <img src="{{ asset('assets/body3/brands/logo_ford.svg') }}" alt="Ford" class="h-20">
+                                <img src="{{ asset('assets/body3/booking/booking_1.svg') }}" alt="1" class="h-20">
                                 <h1 class="text-3xl font-semibold italic">RAPTOR</h1>
                             </div>
                             <p class="text-sm text-gray-400">1.3 XLE CVT (Silver Metallic 1)</p>
                             <p class="mt-2 text-sm text-gray-300">
-                                A reliable and fuel-efficient subcompact sedan known for its practicality and popularity in Asian markets.
+                                A reliable and fuel-efficient subcompact sedan known for its practicality and popularity
+                                in Asian markets.
                             </p>
-                            <button class="mt-4 px-4 py-2 inline-block bg-white text-black rounded-md text-lg font-semibold hover:bg-gray-200 transition">BOOK NOW</button>
-                        </div>    
+                            <button
+                                class="mt-4 px-4 py-2 inline-block bg-white text-black rounded-md text-lg font-semibold hover:bg-gray-200 transition">BOOK
+                                NOW</button>
+                        </div>
 
                     </div>
-            
+
                 </div>
             </section>
             <!-- FORTH CONTAINER -->
             <!-- Booking Process -->
 
-            <div class="justify-center item-center">
-                <h1>How it works</h1>
-                <p>booking process</p>
-                <p>LOGIN OR REGISTER</p>
-                <p>Create an account or sign in to access the car rental service.</p>
+            <div class="bg-gray-200 py-12">
+                <h1 class="text-xl font-semibold text-center text-[#0F3460]">HOW IT WORKS</h1>
+                <br>
+                <div class="max-w-6xl mx-auto space-y-6">
+                    <!-- Step 1 -->
+                    <div class="flex flex-col md:flex-row items-center">
+                        <img src="{{ asset('assets/body4/booking/booking_1.svg') }}" alt="booking 1"
+                            class="w-1/2 md:w-1/3">
+                        <div class="bg-[#0F3460] text-white p-6 w-full md:w-1/2">
+                            <h2 class="text-lg font-bold">LOGIN OR REGISTER</h2>
+                            <p>Create an account or sign in to access the car rental service.</p>
+                        </div>
+                    </div>
 
-                <p>CHOOSE CAR</p>
-                <p>Choose from a variety of available vehicles that suit your needs.</p>
+                    <!-- Step 2 -->
+                    <div class="flex flex-col md:flex-row-reverse items-center">
+                        <img src="{{ asset('assets/body4/booking/booking_2.svg') }}" alt="booking 2"
+                            class="w-1/2 md:w-1/3">
+                        <div class="bg-white text-black p-6 w-full md:w-1/2">
+                            <h2 class="text-lg font-bold">CHOOSE CAR</h2>
+                            <p>Choose from a variety of available vehicles that suit your needs.</p>
+                        </div>
+                    </div>
 
-                <p>PICK A DATE</p>
-                <p>Select the rental start and end dates for your booking.</p>
+                    <!-- Step 3 -->
+                    <div class="flex flex-col md:flex-row items-center">
+                        <img src="{{ asset('assets/body4/booking/booking_3.svg') }}" alt="booking 3"
+                            class="w-1/2 md:w-1/3">
+                        <div class="bg-[#0F3460] text-white p-6 md:w-1/2">
+                            <h2 class="text-lg font-bold">PICK A DATE</h2>
+                            <p>Select the rental start and end dates for your booking.</p>
+                        </div>
+                    </div>
 
-                <p>SELECT A BRANCH</p>
-                <p>Choose a convenient pickup and drop-off location.</p>
+                    <!-- Step 4 -->
+                    <div class="flex flex-col md:flex-row-reverse items-center">
+                        <img src="{{ asset('assets/body4/booking/booking_4.svg') }}" alt="booking 4"
+                            class="w-1/2 md:w-1/3">
+                        <div class="bg-white text-black p-6 w-full md:w-1/2">
+                            <h2 class="text-lg font-bold">SELECT A BRANCH</h2>
+                            <p>Choose a convenient pickup and drop-off location.</p>
+                        </div>
+                    </div>
 
-                <p>DRIVE & ENJOY</p>
-                <p>Pick up your car and enjoy a smooth and hassle-free ride!</p>
+                    <!-- Step 5 -->
+                    <div class="flex flex-col md:flex-row items-center">
+                        <img src="{{ asset('assets/body4/booking/booking_5.svg') }}" alt="booking 5"
+                            class="w-1/2 md:w-1/3">
+                        <div class="bg-[#0F3460] text-white p-6 w-full md:w-1/2">
+                            <h2 class="text-lg font-bold">DRIVE & ENJOY</h2>
+                            <p>Pick up your car and enjoy a smooth and hassle-free ride!</p>
+                        </div>
+                    </div>
+                </div>
             </div>
+
 
             <!-- FIFTH CONTAINER -->
             <section
                 class="py-10 text-center bg-gray-100 dark:bg-gray-900 text-black dark:text-white min-h-screen flex flex-col justify-center">
-                GET IN TOUCH<br>
-                Want to get in touch? We’d love to hear from you. Here’s how you can reach us
-                <br>
-                Talk to sales<br>
-                Connect with our sales team for personalized recommendations and exclusive deals.<br>
-                +639 123 456 88<br>
-                +639 987 621 31
+                <div class="flex flex-row items-center justify-between">
+                    GET IN TOUCH<br>
+                    Want to get in touch? We’d love to hear from you. Here’s how you can reach us
+                    <div class="container">
+                        Talk to sales<br>
+                        Connect with our sales team for personalized recommendations and exclusive deals.<br>
+                        +639 123 456 88<br>
+                        +639 987 621 31
+                    </div>
 
-                EMAIL US<br>
-                Reach out to us via email for inquiries, support, or assistance anytime.<br>
-                bmpcarrentals@gmail.com
+                    <div class="container">
+                        EMAIL US<br>
+                        Reach out to us via email for inquiries, support, or assistance anytime.<br>
+                        bmpcarrentals@gmail.com
+                    </div>
+
+                </div>
+
             </section>
         </main>
     </div>
