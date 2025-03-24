@@ -65,10 +65,10 @@
                                 <i class="fa-solid fa-map-marker-alt text-[#0f294c] text-2xl"></i> Davao, Mintal
                             </span>
                             <span class="flex items-center gap-2 justify-center">
-                                <i class="fa-solid fa-map-marker-alt text-[#0f294c] text-2xl"></i> Davao, Mudiang
+                                <i class="fa-solid fa-map-marker-alt text-[#0f294c] text-2xl"></i> Davao, Ula
                             </span>
                             <span class="flex items-center gap-2 justify-center">
-                                <i class="fa-solid fa-map-marker-alt text-[#0f294c] text-2xl"></i> Davao, Ula
+                                <i class="fa-solid fa-map-marker-alt text-[#0f294c] text-2xl"></i> Davao, Mudiang
                             </span>
                         </div>
                     </div>
@@ -103,35 +103,47 @@
                     <div>
                         <h2 class="text-2xl font-bold mb-6">OUR CAR booking</h2>
                         <div class="grid grid-cols-3 gap-8 justify-center items-center">
-                            <img src="{{ asset('assets/body2/brands/icon_toyota.png') }}" alt="Toyota" class="h-20 mx-auto">
-                            <img src="{{ asset('assets/body2/brands/icon_honda.png') }}" alt="Honda" class="h-20 mx-auto">
+                            <img src="{{ asset('assets/body2/brands/icon_toyota.png') }}" alt="Toyota"
+                                class="h-20 mx-auto">
+                            <img src="{{ asset('assets/body2/brands/icon_honda.png') }}" alt="Honda"
+                                class="h-20 mx-auto">
                             <img src="{{ asset('assets/body2/brands/icon_ford.png') }}" alt="Ford" class="h-20 mx-auto">
-                            <img src="{{ asset('assets/body2/brands/icon_mitshubishi.png') }}" alt="Mitsubishi" class="h-15 mx-auto">
-                            <img src="{{ asset('assets/body2/brands/icon_suzuki.png') }}" alt="Suzuki" class="h-15 mx-auto">
-                            <img src="{{ asset('assets/body2/brands/icon_nissan.png') }}" alt="Nissan" class="h-20 mx-auto">
+                            <img src="{{ asset('assets/body2/brands/icon_mitshubishi.png') }}" alt="Mitsubishi"
+                                class="h-15 mx-auto">
+                            <img src="{{ asset('assets/body2/brands/icon_suzuki.png') }}" alt="Suzuki"
+                                class="h-15 mx-auto">
+                            <img src="{{ asset('assets/body2/brands/icon_nissan.png') }}" alt="Nissan"
+                                class="h-20 mx-auto">
                         </div>
                     </div>
 
-                    <div>
-                        <img src="{{ asset('assets/body2/car/mercedes.png') }}" alt="Mercedes" class="size-auto">
+                </div>
+
+
+                <div class="flex flex-row gap-4 py-12 bg-white text-black max-w-6xl mx-auto">
+                    <div class="flex flex-row">
+                        <img src="{{ asset('assets/body2/car/mercedes.png') }}" alt="Mercedes" class="h-auto">
 
                     </div>
 
-                    <div>
-                        <span class="font-bold">FEEL THE BEST EXPERIENCEWITH OUR RENTAL DEALS</span><br>
-                        <p class="text-black-600 text-sm text-left">
-                            <b>DEAL FOR EVERY BUDGET</b>
+                    <div class="">
+                        <span class="font-bold text-4xl">FEEL THE BEST EXPERIENCEWITH OUR RENTAL DEALS</span><br>
+                        <p class="text-[#ffff] text-2xl text-left  bg-[#0f294c] px-8 py-8 rounded-md">
+                            <img src="{{ asset('assets/body/logo/handshake.svg') }}" alt="handshake" class="h-20">
+                            <b class="">DEAL FOR EVERY BUDGET</b>
                             <br>
                             looking for a car rental for your next trip? Here are some tips to help you find.
                         </p>
                         <br>
-                        <p class="text-black-600 text-sm text-left">
+                        <p class="text-[#ffff] text-2xl text-left  bg-[#0f294c] px-8 py-8 rounded-md">
+                            <img src="{{ asset('assets/body/logo/tag_price.svg') }}" alt="tag price" class="h-20">
                             <b>BEST PRICE GUARANTEED</b>
                             <br>
                             looking for a car rental for your next trip? Here are some tips to help you find.
                         </p>
                     </div>
                 </div>
+
             </section>
             <!-- FORTH CONTAINER -->
             <!-- Services -->
@@ -147,8 +159,7 @@
                         <img src="{{ asset('assets/body3/car/vios.svg') }}" alt="Vios" class="h-auto">
                         <div class="max-w-md">
                             <div class="flex items-center gap-2">
-                                <img src="{{ asset('assets/body3/booking/booking_toyota.svg') }}" alt="Toyota"
-                                    class="h-15">
+                                <img src="{{ asset('assets/body3/brands/logo_toyota.svg') }}" alt="Toyota" class="h-15">
                                 <h1 class="text-3xl font-semibold">VIOS</h1>
                             </div>
                             <p class="text-sm text-gray-400">1.3 XLE CVT (Silver Metallic 1)</p>
@@ -167,7 +178,7 @@
 
                         <div class="max-w-md text-right">
                             <div class="flex items-center justify-end gap-2">
-                                <img src="{{ asset('assets/body3/booking/booking_mitshubishi.svg') }}" alt="Mitsubishi"
+                                <img src="{{ asset('assets/body3/brands/logo_mitshubishi.svg') }}" alt="Mitsubishi"
                                     class="h-10">
                                 <h1 class="text-3xl font-semibold italic">MONTERO</h1>
                             </div>
@@ -189,7 +200,7 @@
 
                         <div class="max-w-md">
                             <div class="flex items-center gap-2">
-                                <img src="{{ asset('assets/body3/booking/booking_1.svg') }}" alt="1" class="h-20">
+                                <img src="{{ asset('assets/body3/brands/logo_ford.svg') }}" alt="1" class="h-20">
                                 <h1 class="text-3xl font-semibold italic">RAPTOR</h1>
                             </div>
                             <p class="text-sm text-gray-400">1.3 XLE CVT (Silver Metallic 1)</p>
@@ -268,26 +279,46 @@
 
             <!-- FIFTH CONTAINER -->
             <section
-                class="py-10 text-center bg-gray-100 dark:bg-gray-900 text-black dark:text-white min-h-screen flex flex-col justify-center">
-                <div class="flex flex-row items-center justify-between">
-                    GET IN TOUCH<br>
-                    Want to get in touch? We’d love to hear from you. Here’s how you can reach us
-                    <div class="container">
-                        Talk to sales<br>
-                        Connect with our sales team for personalized recommendations and exclusive deals.<br>
-                        +639 123 456 88<br>
-                        +639 987 621 31
-                    </div>
+                class="relative py-10 text-center bg-gray-100 dark:bg-gray-900 text-black dark:text-white min-h-screen flex flex-col justify-center">
 
-                    <div class="container">
-                        EMAIL US<br>
-                        Reach out to us via email for inquiries, support, or assistance anytime.<br>
-                        bmpcarrentals@gmail.com
+                <!-- Background Image -->
+                <img src="{{ asset('assets/body5/line_up_car.png') }}" alt="Line-up cars"
+                    class="absolute top-0 left-0 w-full h-full object-cover opacity-50">
+
+                <!-- Content -->
+                <div class="relative z-10 flex flex-col items-center">
+
+                    <!-- Heading -->
+                    <h2 class="text-4xl font-bold">GET IN TOUCH</h2>
+                    <p class="text-lg">Want to get in touch? We’d love to hear from you. Here’s how you can reach us</p>
+
+                    <!-- Contact Cards -->
+                    <div class="flex flex-row items-center justify-center gap-10 mt-10">
+
+                        <!-- Sales Contact -->
+                        <div class="bg-white shadow-lg rounded-lg p-6 max-w-sm text-center">
+                            <img src="{{ asset('assets/body5/telephone.svg') }}" alt="telephone" class="h-20 mx-auto">
+                            <h3 class="font-bold text-xl mt-4">TALK TO SALES</h3>
+                            <p class="text-gray-600">Connect with our sales team for personalized recommendations and
+                                exclusive deals.</p>
+                            <p class="mt-2 font-semibold text-blue-600">+639 123 456 88</p>
+                            <p class="font-semibold text-blue-600">+639 987 621 31</p>
+                        </div>
+
+                        <!-- Email Contact -->
+                        <div class="bg-white shadow-lg rounded-lg p-6 max-w-sm text-center">
+                            <img src="{{ asset('assets/body5/message.svg') }}" alt="message" class="h-20 mx-auto">
+                            <h3 class="font-bold text-xl mt-4">EMAIL US</h3>
+                            <p class="text-gray-600">Reach out to us via email for inquiries, support, or assistance
+                                anytime.</p>
+                            <p class="mt-2 font-semibold text-blue-600">bmpcarrentals@gmail.com</p>
+                        </div>
+
                     </div>
 
                 </div>
-
             </section>
+
         </main>
     </div>
 </body>

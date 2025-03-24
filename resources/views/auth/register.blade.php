@@ -1,4 +1,3 @@
-
 <x-guest-layout>
     <header class="text-white text-4xl font-bold text-center mb-6">Register</header>
 
@@ -30,95 +29,92 @@
         </div>
 
         <!-- Column 2-->
-        <div class="grid grid-cols-3 gap-4">
-            <!-- Province -->
-            <div class="mb-4">
-                <select id="province" name="province" class="w-full px-4 py-3 border rounded-md text-black"
-                    x-data="{ provinces: [], selectedProvince: '' }" x-init="fetch('https://psgc.gitlab.io/api/provinces')
+        <div x-data="{ 
+            provinces: [], 
+            cities: [], 
+            barangays: [], 
+            selectedProvince: '', 
+            selectedCity: ''
+        }" x-init="fetch('https://psgc.gitlab.io/api/provinces')
+        .then(response => response.json())
+        .then(data => provinces = data)">
+            <div class="grid grid-cols-3 gap-4">
+                <!-- Province -->
+                <div class="mb-4">
+                    <select id="province" name="province" class="w-full px-4 py-3 border rounded-md text-black" @change="selectedProvince = $event.target.value;
+                fetch(`https://psgc.gitlab.io/api/provinces/${selectedProvince}/cities-municipalities`)
+                .then(response => response.json())
+                .then(data => cities = data)">
+                        <option value="">Select Province</option>
+                        <template x-for="province in provinces" :key="province . code">
+                            <option :value="province . code" x-text="province.name"></option>
+                        </template>
+                    </select>
+                    <x-input-error :messages="$errors->get('province')" class="mt-2" />
+                </div>
+
+                <!-- City -->
+                <div class="mb-4">
+                    <select id="city" name="city" class="w-full px-4 py-3 border rounded-md text-black" @change="selectedCity = $event.target.value;
+                    fetch(`https://psgc.gitlab.io/api/cities-municipalities/${selectedCity}/barangays`)
                     .then(response => response.json())
-                    .then(data => provinces = data)" @change="selectedProvince = $event.target.value;
-                    fetch(`https://psgc.gitlab.io/api/provinces/${selectedProvince}/municipalities`)
+                    .then(data => barangays = data);
+        
+                    fetch(`https://psgc.gitlab.io/api/cities-municipalities/${selectedCity}`)
                     .then(response => response.json())
-                    .then(data => cities = data)">
-                    <option value="">Select Province</option>
-                    <template x-for="province in provinces" :key="province . code">
-                        <option :value="province . code" x-text="province.name"></option>
-                    </template>
-                </select>
-                <x-input-error :messages="$errors->get('province')" class="mt-2" />
+                    .then(data => zipcode = data.zip_code || '')">
+                        <option value="">Select City</option>
+                        <template x-for="city in cities" :key="city . code">
+                            <option :value="city . code" x-text="city.name"></option>
+                        </template>
+                    </select>
+
+                    <x-input-error :messages="$errors->get('city')" class="mt-2" />
+                </div>
+                <!-- Barangay -->
+                <div class="mb-4">
+                    <select id="barangay" name="barangay" class="w-full px-4 py-3 border rounded-md text-black">
+                        <option value="">Select Barangay</option>
+                        <template x-for="barangay in barangays" :key="barangay . code">
+                            <option :value="barangay . code" x-text="barangay.name"></option>
+                        </template>
+                    </select>
+
+                    <x-input-error :messages="$errors->get('barangay')" class="mt-2" />
+                </div>
             </div>
 
-            <!-- City -->
-            <div class="mb-4">
-                <select id="city" name="city" class="w-full px-4 py-3 border rounded-md text-black"
-                    x-data="{ cities: [], selectedCity: '' }" @change="selectedCity = $event.target.value;
-                    fetch(`https://psgc.gitlab.io/api/municipalities/${selectedCity}/barangays`)
-                    .then(response => response.json())
-                    .then(data => barangays = data)">
-                    <option value="">Select City</option>
-                    <template x-for="city in cities" :key="city . code">
-                        <option :value="city . code" x-text="city.name"></option>
-                    </template>
-                </select>
-
-                <x-input-error :messages="$errors->get('city')" class="mt-2" />
+            <!-- Column 3-->
+            <div class="grid grid-cols-2 gap-4">
+                <!-- Address -->
+                <div class="mb-4">
+                    <x-text-input id="address" class="w-full px-4 py-3 border rounded-md text-black" type="text"
+                        name="address" :value="old('address')" required autofocus placeholder="Address" />
+                    <x-input-error :messages="$errors->get('address')" class="mt-2" />
+                </div>
+                <!-- Phone Number -->
+                <div class="mb-4">
+                    <x-text-input id="phone_number" class="w-full px-4 py-3 border rounded-md text-black" type="number"
+                        name="phone_number" :value="old('phone_number')" required autofocus placeholder="+639" />
+                    <x-input-error :messages="$errors->get('phone_number')" class="mt-2" />
+                </div>
             </div>
 
-            <!-- Zip Code -->
-            <div class="mb-4">
-                <x-text-input id="zipcode" type="text" name="zipcode"
-                    class="w-full px-4 py-3 border rounded-md text-black" readonly x-ref="zipcode" required
-                    placeholder="Zip Code" />
-                <x-input-error :messages="$errors->get('zipcode')" class="mt-2" />
-            </div>
-        </div>
-
-        <!-- Column 3-->
-        <div class="grid grid-cols-2 gap-4">
-            <!-- Barangay -->
-            <div class="mb-4">
-                <select id="barangay" name="barangay" class="w-full px-4 py-3 border rounded-md text-black"
-                    x-data="{ barangays: [] }">
-                    <option value="">Select Barangay</option>
-                    <template x-for="barangay in barangays" :key="barangay . code">
-                        <option :value="barangay . code" x-text="barangay.name"></option>
-                    </template>
-                </select>
-
-                <x-input-error :messages="$errors->get('barangay')" class="mt-2" />
-            </div>
-
-            <!-- Address -->
-            <div class="mb-4">
-                <x-text-input id="address" class="w-full px-4 py-3 border rounded-md text-black" type="text"
-                    name="address" :value="old('address')" required autofocus placeholder="Address" />
-                <x-input-error :messages="$errors->get('address')" class="mt-2" />
-            </div>
-        </div>
-
-        <!-- Column 4-->
-        <div class="grid grid-cols-1 gap-4">
-            <!-- Phone Number -->
-            <div class="mb-4">
-                <x-text-input id="phone_number" class="w-full px-4 py-3 border rounded-md text-black" type="number"
-                    name="phone_number" :value="old('phone_number')" required autofocus placeholder="+639" />
-                <x-input-error :messages="$errors->get('phone_number')" class="mt-2" />
-            </div>
         </div>
 
         <!-- Column 5-->
         <div class="grid grid-cols-3 gap-4">
             <!-- Driver License Number -->
             <div class="mb-4">
-                <label> ‎ </label>
+                <label> ‎Driver License No.</label>
                 <x-text-input id="driver_license" class="w-full px-4 py-3 border rounded-md text-black" type="text"
                     name="driver_license" :value="old('driver_license')" required autofocus
-                    placeholder="Driver License No." />
+                    placeholder="L0X-XX-XXXXXX" />
                 <x-input-error :messages="$errors->get('driver_license')" class="mt-2" />
             </div>
-            <!-- Licence Expiration Date -->
+            <!-- License Expiration Date -->
             <div class="mb-4">
-                <label> Licence Expiration Date</label>
+                <label> License Expiration Date</label>
                 <x-text-input id="licence_exp" class="w-full px-4 py-3 border rounded-md text-black" type="date"
                     name="licence_exp" :value="old('licence_exp')" required autofocus placeholder="Expiration Date" />
                 <x-input-error :messages="$errors->get('licence_exp')" class="mt-2" />
@@ -170,16 +166,6 @@
         color: white;
     }
 </style>
-
-
-
-
-
-
-
-
-
-
 
 
 
