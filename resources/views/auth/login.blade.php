@@ -32,9 +32,9 @@
                 </div>
 
                 <!-- Submit Button -->
-                <div class="text-center">
+                <div class="text-center"> <!--  -->
                     <x-primary-button
-                        class="w-full bg-white py-2 px-4 rounded-md border flex items-center justify-center !text-black hover:!text-white">
+                        class="w-full bg-white py-2 px-4 rounded-md border flex items-center justify-center !text-black hover:!text-white" href="{{ route('userpage') }}">
                         {{ __('SIGN IN') }}
                     </x-primary-button>
                 </div>

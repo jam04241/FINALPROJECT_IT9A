@@ -6,14 +6,37 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 
+// DEFAULT ROUTE
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('guestpage');
+})->name('guestpage');
 
+// LOGIN FORM
 Route::get('/login', function () {
     return view('login');
-});
+})->name('login');
 
+//GUEST AND USER ROUTE
+Route::get('/userpage', function () {
+    return view('userpage');
+})->name('userpage');
+
+Route::get('/cars', function () {
+    return view('cars');
+})->name('cars');
+
+Route::get('/booking', function () {
+    return view('booking');
+})->name('booking');
+
+Route::get('/contact', function () {
+    return view('contact');
+})->name('contact');
+
+
+
+
+// authentication
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

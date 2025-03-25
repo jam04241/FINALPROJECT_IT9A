@@ -1,5 +1,5 @@
 <header class="fixed top-0 w-full bg-white text-black py-2 mt-2">
-    <div class="container mx-auto flex justify-between items-center px-6">
+    <div class="container mx-auto flex justify-center items-center px-6">
         <!-- Logo -->
         <a href="#" class="flex items-center">
             <img src="{{asset('assets/bmp_logo.png')}}" alt="BMP Logo" class="h-8">
@@ -12,10 +12,10 @@
             @auth
                 <a href="{{ url('/dashboard') }}" class="hover:text-gray-700 dark:hover:text-gray-300">Dashboard</a>
             @else
-            <a href="#" class="hover:text-gray-700 dark:hover:text-gray-300">Home</a>
-            <a href="#" class="hover:text-gray-700 dark:hover:text-gray-300">Cars</a>
-            <a href="#" class="hover:text-gray-700 dark:hover:text-gray-300">Booking</a>
-            <a href="#" class="hover:text-gray-700 dark:hover:text-gray-300">Contacts</a>
+            <a href="{{ route('/') }}" class="hover:text-gray-700 dark:hover:text-gray-300">Home</a>
+            <a href="{{ route('cars') }}" class="hover:text-gray-700 dark:hover:text-gray-300">Cars</a>
+            <a href="{{ route('login') }}" class="hover:text-gray-700 dark:hover:text-gray-300">Booking</a>
+            <a href="{{ route('login') }}" class="hover:text-gray-700 dark:hover:text-gray-300">Contacts</a>
             <a href="{{ route('login') }}" class="hover:text-gray-700 dark:hover:text-gray-300">
                 <i class="fa-solid fa-user text-lg"></i>
             </a>
