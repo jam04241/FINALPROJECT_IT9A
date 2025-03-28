@@ -42,10 +42,10 @@
                 </div>
 
 
-                <div class="grid grid-cols-3 justify-center gap-5">
+                <div class="grid grid-cols-4 justify-center gap-[5%] mx-[10%]">
                     <!-- flex flex-row-->
                     <!-- FIRST CARD -->
-                    <div class="max-w-md mx-auto bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
+                    <div class="max-w-md mx-auto my-auto bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
                         <div class="bg-gray-100 p-4 flex justify-center">
                             <img src="{{ asset('assets/user_carpage/car_vios.svg') }}" class="w-3/4" alt="Toyota Vios">
                         </div>
@@ -90,7 +90,7 @@
 
 
                     <!-- SECOND CARD -->
-                    <div class="max-w-md mx-auto bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
+                    <div class="max-w-md mx-auto my-auto bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
                         <div class="bg-gray-100 p-4 flex justify-center">
                             <img src="{{ asset('assets/user_carpage/car_vios.svg') }}" class="w-3/4" alt="Toyota Vios">
                         </div>
@@ -135,7 +135,7 @@
 
 
                     <!-- THIRD CARD -->
-                    <div class="max-w-md mx-auto bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
+                    <div class="max-w-md mx-auto my-auto bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
                         <div class="bg-gray-100 p-4 flex justify-center">
                             <img src="{{ asset('assets/user_carpage/car_vios.svg') }}" class="w-3/4" alt="Toyota Vios">
                         </div>
@@ -179,7 +179,7 @@
                     </div>
 
                     <!-- FORTH CARD -->
-                    <div class="max-w-md mx-auto bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
+                    <div class="max-w-md mx-auto my-auto bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
                         <div class="bg-gray-100 p-4 flex justify-center">
                             <img src="{{ asset('assets/user_carpage/car_vios.svg') }}" class="w-3/4" alt="Toyota Vios">
                         </div>
@@ -224,7 +224,7 @@
 
 
                     <!-- FIFTH CARD -->
-                    <div class="max-w-md mx-auto bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
+                    <div class="max-w-md mx-auto my-auto bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
                         <div class="bg-gray-100 p-4 flex justify-center">
                             <img src="{{ asset('assets/user_carpage/car_vios.svg') }}" class="w-3/4" alt="Toyota Vios">
                         </div>
@@ -268,7 +268,7 @@
                     </div>
 
                     <!-- SIXTH CARD -->
-                    <div class="max-w-md mx-auto bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
+                    <div class="max-w-md mx-auto my-auto bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
                         <div class="bg-gray-100 p-4 flex justify-center">
                             <img src="{{ asset('assets/user_carpage/car_vios.svg') }}" class="w-3/4" alt="Toyota Vios">
                         </div>

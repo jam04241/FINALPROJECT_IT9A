@@ -121,8 +121,8 @@
 
 
                 <div class="flex flex-row gap-4 py-12 bg-white text-black max-w-6xl mx-auto">
-                    <div class="flex flex-row">
-                        <img src="{{ asset('assets/body2/car/mercedes.png') }}" alt="Mercedes" class="h-auto">
+                    <div class="flex flex-between">
+                        <img src="{{ asset('assets/body2/car/mercedes.png') }}" alt="Mercedes" class="w-[100%]">
 
                     </div>
 
@@ -155,7 +155,7 @@
                 <div class="mt-10 flex flex-col gap-12 w-full max-w-5xl">
 
                     <!-- VIOS -->
-                    <div class="flex flex-row items-center justify-between">
+                    <div class="flex flex-row items-center justify-between gap-12">
                         <img src="{{ asset('assets/body3/car/vios.svg') }}" alt="Vios" class="h-auto">
                         <div class="max-w-md">
                             <div class="flex items-center gap-2">
@@ -174,7 +174,7 @@
                     </div>
 
                     <!-- MONTERO -->
-                    <div class="flex flex-row items-center justify-between">
+                    <div class="flex flex-row items-center justify-between gap-12">
 
                         <div class="max-w-md text-right">
                             <div class="flex items-center justify-end gap-2">
@@ -195,7 +195,7 @@
                     </div>
 
                     <!-- RAPTOR -->
-                    <div class="flex flex-row items-center justify-between">
+                    <div class="flex flex-row items-center justify-between gap-12">
                         <img src="{{ asset('assets/body3/car/raptor.svg') }}" alt="Raptor" class="h-auto">
 
                         <div class="max-w-md">

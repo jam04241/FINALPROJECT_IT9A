@@ -1,5 +1,5 @@
  <!-- Header -->
- <header class="fixed top-0 w-full bg-white text-black py-2 mt-2">
+ <header class="fixed top-0 w-full bg-white text-black py-4">
     <div class="container mx-auto flex justify-between items-center px-6">
         <!-- Logo -->
         <a href="#" class="flex items-center">
@@ -15,7 +15,7 @@
             @else
             <a href="{{ route('userpage') }}" class="hover:text-gray-700 dark:hover:text-gray-300">Home</a>
             <a href="{{ route('cars') }}" class="hover:text-gray-700 dark:hover:text-gray-300">Cars</a>
-            <a href="{{ route('cars') }}" class="hover:text-gray-700 dark:hover:text-gray-300">Booking</a>
+            <a href="{{ route('booking') }}" class="hover:text-gray-700 dark:hover:text-gray-300">Booking</a>
             <a href="#" class="hover:text-gray-700 dark:hover:text-gray-300">Contacts</a>
             <a href="{{ route('login') }}" class="hover:text-gray-700 dark:hover:text-gray-300">
                 <img src="{{asset('assets/shelby.jpg')}}" alt="Shelby" class="h-10 rounded-xl">

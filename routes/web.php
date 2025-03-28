@@ -16,6 +16,7 @@ Route::get('/login', function () {
     return view('login');
 })->name('login');
 
+
 //GUEST AND USER ROUTE
 Route::get('/userpage', function () {
     return view('userpage');
@@ -33,6 +34,50 @@ Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 
+//admin routing
+Route::get('/admin-dashboard', function () {
+    return view('admin.dashboard'); 
+})->name('admin.dashboard');
+
+Route::get('/admin-upcoming_bookings', function () {
+    return view('admin.upcoming_bookings');  
+})->name('admin.upcoming_bookings');
+
+Route::get('/admin-active_bookings', function () {
+    return view('admin.active_bookings');  
+})->name('admin.active_bookings');
+
+Route::get('/admin-car_modification', function () {
+    return view('admin.car_modification');  
+})->name('admin.car_modification');
+
+Route::get('/admin-track_vehicle', function () {
+    return view('admin.track_vehicle');  
+})->name('admin.track_vehicle');
+
+Route::get('/admin-maintenance_schedule', function () {
+    return view('admin.maintenance_schedule');  
+})->name('admin.maintenance_schedule');
+
+Route::get('/admin-payment_history', function () {
+    return view('admin.payment_history');  
+})->name('admin.payment_history');
+
+Route::get('/admin-rental_agreement', function () {
+    return view('admin.rental_agreement');  
+})->name('admin.rental_agreement');
+
+Route::get('/admin-customer_records', function () {
+    return view('admin.customer_records');  
+})->name('admin.customer_records');
+
+Route::get('/admin-report_analytics', function () {
+    return view('admin.report_analytics');  
+})->name('admin.report_analytics');
+
+Route::get('/admin-employee', function () {
+    return view('admin.employee');  
+})->name('admin.employee');
 
 
 

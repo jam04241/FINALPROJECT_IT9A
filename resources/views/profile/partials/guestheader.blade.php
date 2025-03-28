@@ -1,5 +1,5 @@
  <!-- Header -->
- <header class="fixed top-0 w-full bg-white text-black py-2 mt-2">
+ <header class="fixed top-0 w-full bg-white text-black py-5">
     <div class="container mx-auto flex justify-between items-center px-6">
         <!-- Logo -->
         <a href="#" class="flex items-center">
