@@ -17,7 +17,7 @@ class Customer extends Model
         'user_id',
         'province',
         'city',
-        'zip_code',
+        'barangay',
         'address',
         'phone_number',
         'driver_license_number',

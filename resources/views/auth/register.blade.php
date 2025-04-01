@@ -1,7 +1,7 @@
 <x-guest-layout>
     <header class="text-white text-4xl font-bold text-center mb-6">Register</header>
 
-    <form method="POST" action="{{ route('register') }}">
+    <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
         @csrf
 
         <!-- Column 1-->
@@ -145,8 +145,8 @@
             <!-- Confirm Password -->
             <div class="mb-4">
                 <x-text-input id="confirmpassword" class="w-full px-4 py-3 border rounded-md text-black bg-white"
-                    type="password" name="confirmpassword" required autofocus placeholder="Confirm Password" />
-                <x-input-error :messages="$errors->get('confirmpassword')" class="mt-2" />
+                    type="password" name="password_confirmation" required autofocus placeholder="Confirm Password" />
+                <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
             </div>
         </div>
         <div class="flex items-center justify-end mt-4">
@@ -158,6 +158,8 @@
             <x-primary-button class="ms-4">
                 {{ __('Register') }}
             </x-primary-button>
+
+            <input type="hidden" name="is_banned" value="0" />
         </div>
     </form>
 </x-guest-layout>

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Auth\RegisteredUserController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
@@ -16,6 +17,13 @@ Route::get('/login', function () {
     return view('login');
 })->name('login');
 
+// REGISTER
+Route::get('/register', [RegisteredUserController::class, 'create'])
+    ->middleware('guest');
+
+Route::post('/register', [RegisteredUserController::class, 'store'])
+    ->middleware('guest')
+    ->name('register');
 
 //GUEST AND USER ROUTE
 Route::get('/userpage', function () {

@@ -19,7 +19,7 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->string('province');
             $table->string('city');
-            $table->string('zip_code');
+            $table->string('barangay');
             $table->string('address');
             $table->string('phone_number');
             $table->string('driver_license_number')->unique();
