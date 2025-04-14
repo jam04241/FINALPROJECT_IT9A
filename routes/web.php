@@ -42,7 +42,11 @@ Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 
-//admin routing
+Route::get('/payment_section', function () {
+    return view('paymentsection');
+})->name('payment_section');
+
+//ADMIN ROUTING
 Route::get('/admin-dashboard', function () {
     return view('admin.dashboard'); 
 })->name('admin.dashboard');
@@ -86,6 +90,15 @@ Route::get('/admin-report_analytics', function () {
 Route::get('/admin-employee', function () {
     return view('admin.employee');  
 })->name('admin.employee');
+
+Route::get('/admin.bookings', function () {
+    return view('bookings');  
+})->name('admin.bookings');
+
+
+
+
+
 
 
 

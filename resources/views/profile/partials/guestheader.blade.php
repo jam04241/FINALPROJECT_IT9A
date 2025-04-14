@@ -1,6 +1,6 @@
  <!-- Header -->
- <header class="fixed top-0 w-full bg-white text-black py-5">
-    <div class="container mx-auto flex justify-between items-center px-6">
+ <header class="fixed top-0 w-full bg-white text-black py-4 z-50">
+    <div class="container mx-auto flex justify-between items-center px-6s">
         <!-- Logo -->
         <a href="#" class="flex items-center">
             <img src="{{asset('assets/bmp_logo.png')}}" alt="BMP Logo" class="h-8">
