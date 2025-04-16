@@ -65,7 +65,7 @@
               </li>
           </ul>
           <ul>
-          <li class="relative px-6 py-3">
+              <li class="relative px-6 py-3">
                   <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
                     href="{{ url('/admin-bookings') }}">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
